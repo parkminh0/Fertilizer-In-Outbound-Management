@@ -1,0 +1,408 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0B2BD30-FB69-421A-B9C6-88BF166E57AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HanIlCNS</RootNamespace>
+    <AssemblyName>HanIlCNS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>free-icon-delivery-4586093.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v23.1" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1" />
+    <Reference Include="DevExpress.Data.v23.1" />
+    <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.1.Drawing, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.1" />
+    <Reference Include="DevExpress.Sparkline.v23.1.Core" />
+    <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.1" />
+    <Reference Include="DevExpress.Printing.v23.1.Core" />
+    <Reference Include="DevExpress.Drawing.v23.1" />
+    <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.1.Core, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Excel, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Utility\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Utility\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.12.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.12\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SecureApp, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Utility\SecureApp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseFrm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrm\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrm\WarningMSG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrm\WarningMSG.Designer.cs">
+      <DependentUpon>WarningMSG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDILogic\MakeOutInvoice.cs" />
+    <Compile Include="MDIForm\FormPopUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\FormPopUser.Designer.cs">
+      <DependentUpon>FormPopUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\FormPopUserInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\FormPopUserInf.Designer.cs">
+      <DependentUpon>FormPopUserInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPivotLocalizer.cs" />
+    <Compile Include="Config\Constance.cs" />
+    <Compile Include="Config\OptionInfo.cs" />
+    <Compile Include="Database\DBManager.cs" />
+    <Compile Include="Database\DBMPostgreSql.cs" />
+    <Compile Include="MDIForm\Pivot\FormPayPivot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\Pivot\FormPayPivot.Designer.cs">
+      <DependentUpon>FormPayPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormMakePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormMakePay.Designer.cs">
+      <DependentUpon>FormMakePay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogicManage\CommonLogic.cs" />
+    <Compile Include="LogicManage\ExcelLoading.cs" />
+    <Compile Include="LogicManage\ExceptionManager.cs" />
+    <Compile Include="LogicManage\LogicManager.cs" />
+    <Compile Include="LogicManage\ReportLogic.cs" />
+    <Compile Include="LogicManage\WBLogic.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormCompInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormCompInf.Designer.cs">
+      <DependentUpon>FormCompInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormPopCarInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormPopCarInf.Designer.cs">
+      <DependentUpon>FormPopCarInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormPopNHInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormPopNHInf.Designer.cs">
+      <DependentUpon>FormPopNHInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormPopProductInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\BasisManagement\FormPopProductInf.Designer.cs">
+      <DependentUpon>FormPopProductInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\FormDBManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\FormDBManage.designer.cs">
+      <DependentUpon>FormDBManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\Pivot\FormPivot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\Pivot\FormPivot.Designer.cs">
+      <DependentUpon>FormPivot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\OutManagement\FormOutAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\OutManagement\FormOutAccount.Designer.cs">
+      <DependentUpon>FormOutAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\OutManagement\FormOutLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\OutManagement\FormOutLedger.Designer.cs">
+      <DependentUpon>FormOutLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\OutManagement\FormPopOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\OutManagement\FormPopOut.Designer.cs">
+      <DependentUpon>FormPopOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormInspectAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormInspectAccount.Designer.cs">
+      <DependentUpon>FormInspectAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormMakeInspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormMakeInspect.Designer.cs">
+      <DependentUpon>FormMakeInspect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormPayAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\PaynInspectManagement\FormPayAccount.Designer.cs">
+      <DependentUpon>FormPayAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDILogic\CompInfIO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportSource\OutDetailData.cs" />
+    <Compile Include="Report\ReportInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportInvoice.Designer.cs">
+      <DependentUpon>ReportInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSub1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSub1.Designer.cs">
+      <DependentUpon>ReportSub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSub2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSub2.Designer.cs">
+      <DependentUpon>ReportSub2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDILogic\UserAccount.cs" />
+    <Compile Include="Utility\AES.cs" />
+    <Compile Include="Utility\NetUtil.cs" />
+    <EmbeddedResource Include="BaseFrm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrm\WarningMSG.resx">
+      <DependentUpon>WarningMSG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\FormPopUser.resx">
+      <DependentUpon>FormPopUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\FormPopUserInf.resx">
+      <DependentUpon>FormPopUserInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\Pivot\FormPayPivot.resx">
+      <DependentUpon>FormPayPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\PaynInspectManagement\FormMakePay.resx">
+      <DependentUpon>FormMakePay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\BasisManagement\FormCompInf.resx">
+      <DependentUpon>FormCompInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\BasisManagement\FormPopCarInf.resx">
+      <DependentUpon>FormPopCarInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\BasisManagement\FormPopNHInf.resx">
+      <DependentUpon>FormPopNHInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\BasisManagement\FormPopProductInf.resx">
+      <DependentUpon>FormPopProductInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\FormDBManage.resx">
+      <DependentUpon>FormDBManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\Pivot\FormPivot.resx">
+      <DependentUpon>FormPivot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\OutManagement\FormOutAccount.resx">
+      <DependentUpon>FormOutAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\OutManagement\FormOutLedger.resx">
+      <DependentUpon>FormOutLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\OutManagement\FormPopOut.resx">
+      <DependentUpon>FormPopOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\PaynInspectManagement\FormInspectAccount.resx">
+      <DependentUpon>FormInspectAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\PaynInspectManagement\FormMakeInspect.resx">
+      <DependentUpon>FormMakeInspect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\PaynInspectManagement\FormPayAccount.resx">
+      <DependentUpon>FormPayAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\ReportInvoice.resx">
+      <DependentUpon>ReportInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSub1.resx">
+      <DependentUpon>ReportSub1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSub2.resx">
+      <DependentUpon>ReportSub2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="free-icon-delivery-4586093.ico" />
+    <Content Include="Resources\basket_add_32.png" />
+    <Content Include="Resources\basket_go_32.png" />
+    <Content Include="Resources\Excel.png" />
+    <Content Include="Resources\Excel16.png" />
+    <Content Include="Resources\excel30.jpg" />
+    <Content Include="Resources\Excel32.png" />
+    <Content Include="Resources\free-icon-delivery-4586093.png" />
+    <Content Include="Resources\free-icon-delivery-45860931.png" />
+    <Content Include="Resources\Keychain.png" />
+    <Content Include="Resources\Next_16x16.png" />
+    <Content Include="Resources\Prev_16x16.png" />
+    <Content Include="Resources\Transmit.png" />
+    <None Include="Resources\도장.png" />
+    <Content Include="Utility\Devart.Data.dll" />
+    <Content Include="Utility\Devart.Data.PostgreSql.dll" />
+    <Content Include="Utility\Excel.dll" />
+    <Content Include="Utility\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Utility\SecureApp.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
